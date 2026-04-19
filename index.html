@@ -13,12 +13,18 @@
     <div class="header-title">&#9670; Libro degli Incantesimi &#9670;</div>
     <div class="header-subtitle">Dungeons &amp; Dragons 5a Edizione</div>
     <div class="header-divider"></div>
+    <nav class="view-tabs">
+      <button class="view-tab active" data-view="all">Tutti gli Incantesimi</button>
+      <button class="view-tab" data-view="saved">
+        &#9733; Salvati <span class="saved-count-badge" id="saved-count-badge">0</span>
+      </button>
+    </nav>
   </div>
 </header>
 
 <div class="layout">
   <!-- Sidebar filters -->
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-title">&#9670; Filtri</div>
 
     <div class="search-wrap">
@@ -52,7 +58,7 @@
   <!-- Main content -->
   <main class="main">
     <div class="results-bar">
-      <div class="results-count">Incantesimi trovati: <span id="count">0</span></div>
+      <div class="results-count" id="results-label">Incantesimi trovati: <span id="count">0</span></div>
       <select class="sort-select" id="sort-select">
         <option value="name">Nome A–Z</option>
         <option value="level">Livello</option>

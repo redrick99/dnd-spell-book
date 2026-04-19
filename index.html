@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libro degli Incantesimi — D&D 5e</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-title">&#9670; Libro degli Incantesimi &#9670;</div>
+    <div class="header-subtitle">Dungeons &amp; Dragons 5a Edizione</div>
+    <div class="header-divider"></div>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- Sidebar filters -->
+  <aside class="sidebar">
+    <div class="sidebar-title">&#9670; Filtri</div>
+
+    <div class="search-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input id="search" type="text" placeholder="Cerca incantesimo..." autocomplete="off" />
+    </div>
+
+    <div class="filter-group" id="group-class">
+      <div class="filter-group-title">Classe</div>
+      <div class="filter-options" id="filter-class"></div>
+    </div>
+
+    <div class="filter-group" id="group-level">
+      <div class="filter-group-title">Livello</div>
+      <div class="filter-options" id="filter-level"></div>
+    </div>
+
+    <div class="filter-group" id="group-school">
+      <div class="filter-group-title">Scuola</div>
+      <div class="filter-options" id="filter-school"></div>
+    </div>
+
+    <div class="filter-group" id="group-action">
+      <div class="filter-group-title">Tipo di Azione</div>
+      <div class="filter-options" id="filter-action"></div>
+    </div>
+
+    <button class="btn-reset" id="btn-reset">&#10006; Azzera filtri</button>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+    <div class="results-bar">
+      <div class="results-count">Incantesimi trovati: <span id="count">0</span></div>
+      <select class="sort-select" id="sort-select">
+        <option value="name">Nome A–Z</option>
+        <option value="level">Livello</option>
+        <option value="school">Scuola</option>
+      </select>
+    </div>
+    <div class="spell-grid" id="spell-grid"></div>
+  </main>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <div class="modal-top-bar" id="modal-top-bar"></div>
+    <div class="modal-body" id="modal-body"></div>
+    <button class="modal-close" id="modal-close" aria-label="Chiudi">&#10005;</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -70,8 +70,48 @@ header::before {
 .header-divider {
   width: 200px; height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: .75rem auto 0;
+  margin: .75rem auto .75rem;
 }
+
+/* ─── View tabs ─── */
+.view-tabs {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: .25rem;
+}
+.view-tab {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: .35rem 1.1rem;
+  color: var(--text-muted);
+  font-family: 'Cinzel', serif;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.view-tab:hover { border-color: var(--gold); color: var(--gold); }
+.view-tab.active { background: rgba(201,168,76,.12); border-color: var(--gold); color: var(--gold); }
+
+.saved-count-badge {
+  background: var(--purple);
+  color: #fff;
+  font-size: .65rem;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  padding: .05rem .4rem;
+  border-radius: 20px;
+  min-width: 18px;
+  text-align: center;
+  display: inline-block;
+}
+.saved-count-badge.hidden { display: none; }
 
 /* ─── Layout ─── */
 .layout {
@@ -257,6 +297,22 @@ header::before {
   box-shadow: var(--shadow);
 }
 .spell-card:hover::before { opacity: 1; }
+.spell-card.saved { border-color: rgba(201,168,76,.4); }
+
+/* Bookmark button */
+.btn-bookmark {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0 0 .25rem;
+  flex-shrink: 0;
+  transition: color var(--transition), transform var(--transition);
+}
+.btn-bookmark:hover { color: var(--gold); transform: scale(1.2); }
+.btn-bookmark.saved { color: var(--gold); }
 
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; margin-bottom: .5rem; }
 .card-name {
@@ -512,6 +568,10 @@ header::before {
 .class-artificer { background: rgba(180,140,80,.15);  color: #c8a050; }
 .class-fighter   { background: rgba(200,100,80,.15);  color: #c86450; }
 .class-rogue     { background: rgba(80,80,80,.15);    color: #999; }
+
+/* Saved view hides sidebar */
+.sidebar.hidden { display: none; }
+.layout.full-width { grid-template-columns: 1fr; }
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {

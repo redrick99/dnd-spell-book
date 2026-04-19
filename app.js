@@ -5,6 +5,8 @@ let allSpells = [];
 const filters = { classes: new Set(), levels: new Set(), schools: new Set(), actions: new Set() };
 let searchQuery = '';
 let sortBy = 'name';
+let currentView = 'all'; // 'all' | 'saved'
+let savedSlugs = new Set(JSON.parse(localStorage.getItem('savedSpells') || '[]'));
 
 // ─── Label helpers ──────────────────────────────────────────────────────────
 const LEVEL_LABELS = {
@@ -34,6 +36,70 @@ function actionIt(a)   { return ACTION_IT[a]   ?? capitalize(a?.replace(/_/g, ' 
 function classIt(c)    { return CLASS_IT[c]    ?? capitalize(c); }
 function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
 
+// ─── Saved spells ────────────────────────────────────────────────────────────
+function persistSaved() {
+  localStorage.setItem('savedSpells', JSON.stringify([...savedSlugs]));
+}
+
+function toggleSaved(slug, e) {
+  e.stopPropagation();
+  if (savedSlugs.has(slug)) {
+    savedSlugs.delete(slug);
+  } else {
+    savedSlugs.add(slug);
+  }
+  persistSaved();
+  updateSavedBadge();
+  if (currentView === 'saved') {
+    render();
+  } else {
+    // just update the bookmark icon on the card
+    const btn = document.querySelector(`.btn-bookmark[data-slug="${slug}"]`);
+    if (btn) {
+      btn.classList.toggle('saved', savedSlugs.has(slug));
+      btn.title = savedSlugs.has(slug) ? 'Rimuovi dai salvati' : 'Salva incantesimo';
+      btn.innerHTML = savedSlugs.has(slug) ? '&#9733;' : '&#9734;';
+    }
+    const card = btn?.closest('.spell-card');
+    if (card) card.classList.toggle('saved', savedSlugs.has(slug));
+    // update modal bookmark if open
+    syncModalBookmark(slug);
+  }
+}
+
+function updateSavedBadge() {
+  const badge = document.getElementById('saved-count-badge');
+  badge.textContent = savedSlugs.size;
+  badge.classList.toggle('hidden', savedSlugs.size === 0);
+}
+
+function syncModalBookmark(slug) {
+  const btn = document.getElementById('modal-bookmark-btn');
+  if (!btn || btn.dataset.slug !== slug) return;
+  const isSaved = savedSlugs.has(slug);
+  btn.classList.toggle('saved', isSaved);
+  btn.title = isSaved ? 'Rimuovi dai salvati' : 'Salva incantesimo';
+  btn.innerHTML = isSaved ? '&#9733; Salvato' : '&#9734; Salva';
+}
+
+// ─── View switching ──────────────────────────────────────────────────────────
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.view === view));
+  const sidebar = document.getElementById('sidebar');
+  const layout  = sidebar.closest('.layout');
+  if (view === 'saved') {
+    sidebar.classList.add('hidden');
+    layout.classList.add('full-width');
+    document.getElementById('results-label').innerHTML = 'Incantesimi salvati: <span id="count">0</span>';
+  } else {
+    sidebar.classList.remove('hidden');
+    layout.classList.remove('full-width');
+    document.getElementById('results-label').innerHTML = 'Incantesimi trovati: <span id="count">0</span>';
+  }
+  render();
+}
+
 // ─── Build filter UI ─────────────────────────────────────────────────────────
 function buildFilters() {
   const classes = new Set(), levels = new Set(), schools = new Set(), actions = new Set();
@@ -44,14 +110,10 @@ function buildFilters() {
     if (s.action_type)  actions.add(s.action_type);
   });
 
-  renderFilterGroup('filter-class',  [...classes].sort(),
-    c => classIt(c), filters.classes, toggleClass);
-  renderFilterGroup('filter-level',  [...levels].sort((a,b) => a-b),
-    l => levelLabel(l), filters.levels, toggleLevel);
-  renderFilterGroup('filter-school', [...schools].sort(),
-    s => schoolIt(s), filters.schools, toggleSchool);
-  renderFilterGroup('filter-action', [...actions].sort(),
-    a => actionIt(a), filters.actions, toggleAction);
+  renderFilterGroup('filter-class',  [...classes].sort(),       c => classIt(c),   filters.classes, toggleClass);
+  renderFilterGroup('filter-level',  [...levels].sort((a,b) => a-b), l => levelLabel(l), filters.levels, toggleLevel);
+  renderFilterGroup('filter-school', [...schools].sort(),       s => schoolIt(s),  filters.schools, toggleSchool);
+  renderFilterGroup('filter-action', [...actions].sort(),       a => actionIt(a),  filters.actions, toggleAction);
 }
 
 function renderFilterGroup(containerId, values, labelFn, activeSet, toggleFn) {
@@ -92,9 +154,14 @@ function toggleAction(v, on) { on ? filters.actions.add(v)  : filters.actions.de
 
 // ─── Filtering & sorting ─────────────────────────────────────────────────────
 function filteredSpells() {
+  const pool = currentView === 'saved'
+    ? allSpells.filter(s => savedSlugs.has(s.slug))
+    : allSpells;
+
   const q = searchQuery.toLowerCase().trim();
-  return allSpells.filter(s => {
+  return pool.filter(s => {
     if (q && !(s.name_it?.toLowerCase().includes(q) || s.name?.toLowerCase().includes(q))) return false;
+    if (currentView === 'saved') return true; // no extra filters in saved view
     if (filters.classes.size && !(s.classes||[]).some(c => filters.classes.has(c))) return false;
     if (filters.levels.size  && !filters.levels.has(String(s.level)))  return false;
     if (filters.schools.size && !filters.schools.has(s.school))  return false;
@@ -115,11 +182,10 @@ function render() {
   grid.innerHTML = '';
 
   if (spells.length === 0) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <div class="empty-state-icon">&#9760;</div>
-        <div class="empty-state-text">Nessun incantesimo trovato</div>
-      </div>`;
+    const msg = currentView === 'saved'
+      ? '<div class="empty-state-icon">&#9734;</div><div class="empty-state-text">Nessun incantesimo salvato.<br>Clicca &#9734; su una card per aggiungerlo.</div>'
+      : '<div class="empty-state-icon">&#9760;</div><div class="empty-state-text">Nessun incantesimo trovato</div>';
+    grid.innerHTML = `<div class="empty-state">${msg}</div>`;
     return;
   }
 
@@ -133,8 +199,10 @@ function render() {
       hdr.textContent = levelLabel(spell.level);
       frag.appendChild(hdr);
     }
+
+    const isSaved = savedSlugs.has(spell.slug);
     const card = document.createElement('div');
-    card.className = `spell-card school-${spell.school || 'unknown'}`;
+    card.className = `spell-card school-${spell.school || 'unknown'}${isSaved ? ' saved' : ''}`;
 
     const badges = [
       spell.concentration ? '<span class="badge badge-concentration">Concentrazione</span>' : '',
@@ -153,7 +221,13 @@ function render() {
           <div class="card-name">${spell.name_it || spell.name}</div>
           ${spell.name_it !== spell.name ? `<div class="card-name-en">${spell.name}</div>` : ''}
         </div>
-        <div class="card-level-badge">${levelLabel(spell.level)}</div>
+        <div style="display:flex;align-items:center;gap:.4rem;flex-shrink:0">
+          <button class="btn-bookmark${isSaved ? ' saved' : ''}" data-slug="${spell.slug}"
+            title="${isSaved ? 'Rimuovi dai salvati' : 'Salva incantesimo'}">
+            ${isSaved ? '&#9733;' : '&#9734;'}
+          </button>
+          <div class="card-level-badge">${levelLabel(spell.level)}</div>
+        </div>
       </div>
       <div class="card-meta">
         <span class="card-school school-${spell.school}">${schoolIt(spell.school)}</span>
@@ -164,6 +238,7 @@ function render() {
       ${components ? `<div class="card-components">Componenti: <strong>${components}</strong></div>` : ''}
     `;
 
+    card.querySelector('.btn-bookmark').addEventListener('click', e => toggleSaved(spell.slug, e));
     card.addEventListener('click', () => openModal(spell));
     frag.appendChild(card);
   });
@@ -176,23 +251,21 @@ function openModal(spell) {
   const topBar   = document.getElementById('modal-top-bar');
   const body     = document.getElementById('modal-body');
 
-  // Inherit school colour via CSS class on the top bar
   topBar.className = `modal-top-bar school-${spell.school}`;
-  // Force the CSS variable to propagate using inline style as fallback
   const schoolColors = {
     abjuration:'#5b9bd5', conjuration:'#e8a030', divination:'#85c1e9',
     enchantment:'#d98ce8', evocation:'#e85555', illusion:'#9b59b6',
     necromancy:'#2ecc71', transmutation:'#c9a84c',
   };
-  const col = schoolColors[spell.school] || '#7c5cbf';
-  topBar.style.background = col;
+  topBar.style.background = schoolColors[spell.school] || '#7c5cbf';
 
   const components = (spell.components||[]).join(', ');
   const classes    = (spell.classes||[]).map(c => `<span class="class-pill class-${c}">${classIt(c)}</span>`).join('');
+  const isSaved    = savedSlugs.has(spell.slug);
 
   const badges = [
     spell.concentration ? '<span class="badge badge-concentration">Concentrazione</span>' : '',
-    spell.ritual        ? '<span class="badge badge-ritual">Rituale</span>'         : '',
+    spell.ritual        ? '<span class="badge badge-ritual">Rituale</span>'               : '',
     spell.attack_roll   ? '<span class="badge" style="background:rgba(232,85,85,.12);color:#e85555;border:1px solid rgba(232,85,85,.3)">Tiro per colpire</span>' : '',
   ].filter(Boolean).join('');
 
@@ -203,9 +276,9 @@ function openModal(spell) {
     ['Gittata',    spell.range || '—'],
     ['Durata',     spell.duration || '—'],
     ['Componenti', components || '—'],
-    spell.saving_throw ? ['Tiro Salvezza', spell.saving_throw] : null,
-    spell.damage       ? ['Danno', spell.damage]               : null,
-    spell.area_of_effect ? ['Area', spell.area_of_effect]      : null,
+    spell.saving_throw   ? ['Tiro Salvezza', spell.saving_throw]   : null,
+    spell.damage         ? ['Danno', spell.damage]                  : null,
+    spell.area_of_effect ? ['Area', spell.area_of_effect]           : null,
   ].filter(Boolean);
 
   const statsHtml = stats.map(([label, val]) => `
@@ -215,9 +288,17 @@ function openModal(spell) {
     </div>`).join('');
 
   body.innerHTML = `
-    <div class="modal-header">
-      <div class="modal-title">${spell.name_it || spell.name}</div>
-      ${spell.name_it !== spell.name ? `<div class="modal-title-en">${spell.name}</div>` : ''}
+    <div class="modal-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem">
+      <div>
+        <div class="modal-title">${spell.name_it || spell.name}</div>
+        ${spell.name_it !== spell.name ? `<div class="modal-title-en">${spell.name}</div>` : ''}
+      </div>
+      <button id="modal-bookmark-btn" data-slug="${spell.slug}"
+        class="btn-bookmark${isSaved ? ' saved' : ''}"
+        title="${isSaved ? 'Rimuovi dai salvati' : 'Salva incantesimo'}"
+        style="font-size:1.3rem;padding:.25rem .5rem;border:1px solid var(--border);border-radius:6px;margin-top:.2rem">
+        ${isSaved ? '&#9733; Salvato' : '&#9734; Salva'}
+      </button>
     </div>
 
     <div class="modal-tags">
@@ -249,6 +330,11 @@ function openModal(spell) {
         <div class="modal-desc">${spell.cantrip_upgrade}</div>
       </div>` : ''}
   `;
+
+  document.getElementById('modal-bookmark-btn').addEventListener('click', e => {
+    toggleSaved(spell.slug, e);
+    syncModalBookmark(spell.slug);
+  });
 
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -287,12 +373,17 @@ document.getElementById('btn-reset').addEventListener('click', () => {
   render();
 });
 
+document.querySelectorAll('.view-tab').forEach(tab => {
+  tab.addEventListener('click', () => setView(tab.dataset.view));
+});
+
 // ─── Bootstrap ───────────────────────────────────────────────────────────────
 async function init() {
   try {
     const res = await fetch('incantesimi_db.json');
     allSpells = await res.json();
     buildFilters();
+    updateSavedBadge();
     render();
   } catch (err) {
     document.getElementById('spell-grid').innerHTML = `

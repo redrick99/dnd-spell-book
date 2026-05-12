@@ -1,48 +1,180 @@
 'use strict';
 
-// ─── Data & State ───────────────────────────────────────────────────────────
+// ─── Language & i18n ─────────────────────────────────────────────────────────
+let currentLang = localStorage.getItem('spellLang') || 'it';
+
+const STRINGS = {
+  it: {
+    title:            'Libro degli Incantesimi',
+    dbFile:           'incantesimi_db.json',
+    filters:          '◆ Filtri',
+    searchPlaceholder:'Cerca incantesimo...',
+    filterClass:      'Classe',
+    filterLevel:      'Livello',
+    filterSchool:     'Scuola',
+    filterAction:     'Tipo di Azione',
+    resetBtn:         '✖ Azzera filtri',
+    sortName:         'Nome A–Z',
+    sortLevel:        'Livello',
+    sortSchool:       'Scuola',
+    tabAll:           'Tutti gli Incantesimi',
+    tabSaved:         'Salvati',
+    resultsFound:     'Incantesimi trovati',
+    resultsSaved:     'Incantesimi salvati',
+    emptyNoResults:   'Nessun incantesimo trovato',
+    emptyNoSaved:     'Nessun incantesimo salvato.<br>Clicca ☆ su una card per aggiungerlo.',
+    concentration:    'Concentrazione',
+    ritual:           'Rituale',
+    attackRoll:       'Tiro per colpire',
+    bookmarkSave:     'Salva incantesimo',
+    bookmarkRemove:   'Rimuovi dai salvati',
+    bookmarkSaved:    '&#9733; Salvato',
+    bookmarkUnsaved:  '&#9734; Salva',
+    statLevel:        'Livello',
+    statSchool:       'Scuola',
+    statAction:       'Azione',
+    statRange:        'Gittata',
+    statDuration:     'Durata',
+    statComponents:   'Componenti',
+    statSavingThrow:  'Tiro Salvezza',
+    statDamage:       'Danno',
+    statArea:         'Area',
+    modalMaterial:    'Materiale:',
+    modalDescription: 'Descrizione',
+    modalHigherLevel: 'Slot di Livello Superiore',
+    modalCantripUpgrade: 'Trucchetto Potenziato',
+    cardComponents:   'Componenti:',
+    loadError:        'Errore nel caricamento degli incantesimi.<br>Apri il sito tramite un server locale (es. <code>npx serve .</code>).',
+  },
+  en: {
+    title:            'Spell Book',
+    dbFile:           'spells_db.json',
+    filters:          '◆ Filters',
+    searchPlaceholder:'Search spell...',
+    filterClass:      'Class',
+    filterLevel:      'Level',
+    filterSchool:     'School',
+    filterAction:     'Action Type',
+    resetBtn:         '✖ Reset filters',
+    sortName:         'Name A–Z',
+    sortLevel:        'Level',
+    sortSchool:       'School',
+    tabAll:           'All Spells',
+    tabSaved:         'Saved',
+    resultsFound:     'Spells found',
+    resultsSaved:     'Saved spells',
+    emptyNoResults:   'No spells found',
+    emptyNoSaved:     'No saved spells.<br>Click ☆ on a card to add one.',
+    concentration:    'Concentration',
+    ritual:           'Ritual',
+    attackRoll:       'Attack Roll',
+    bookmarkSave:     'Save spell',
+    bookmarkRemove:   'Remove from saved',
+    bookmarkSaved:    '&#9733; Saved',
+    bookmarkUnsaved:  '&#9734; Save',
+    statLevel:        'Level',
+    statSchool:       'School',
+    statAction:       'Action',
+    statRange:        'Range',
+    statDuration:     'Duration',
+    statComponents:   'Components',
+    statSavingThrow:  'Saving Throw',
+    statDamage:       'Damage',
+    statArea:         'Area',
+    modalMaterial:    'Material:',
+    modalDescription: 'Description',
+    modalHigherLevel: 'Higher-Level Slots',
+    modalCantripUpgrade: 'Cantrip Upgrade',
+    cardComponents:   'Components:',
+    loadError:        'Error loading spells.<br>Open the site via a local server (e.g. <code>npx serve .</code>).',
+  },
+};
+
+const LEVEL_LABELS = {
+  it: { 0:'Trucchetto', 1:'1° Livello', 2:'2° Livello', 3:'3° Livello', 4:'4° Livello', 5:'5° Livello', 6:'6° Livello', 7:'7° Livello', 8:'8° Livello', 9:'9° Livello' },
+  en: { 0:'Cantrip', 1:'1st Level', 2:'2nd Level', 3:'3rd Level', 4:'4th Level', 5:'5th Level', 6:'6th Level', 7:'7th Level', 8:'8th Level', 9:'9th Level' },
+};
+
+const SCHOOL_LABELS = {
+  it: { abjuration:'Abiurazione', conjuration:'Congiurazione', divination:'Divinazione', enchantment:'Ammaliamento', evocation:'Evocazione', illusion:'Illusione', necromancy:'Negromanzia', transmutation:'Trasmutazione' },
+  en: { abjuration:'Abjuration', conjuration:'Conjuration', divination:'Divination', enchantment:'Enchantment', evocation:'Evocation', illusion:'Illusion', necromancy:'Necromancy', transmutation:'Transmutation' },
+};
+
+const ACTION_LABELS = {
+  it: { action:'Azione', bonus_action:'Azione Bonus', reaction:'Reazione', '1 minute':'1 Minuto', '10 minutes':'10 Minuti', '1 hour':'1 Ora', special:'Speciale' },
+  en: { action:'Action', bonus_action:'Bonus Action', reaction:'Reaction', '1 minute':'1 Minute', '10 minutes':'10 Minutes', '1 hour':'1 Hour', special:'Special' },
+};
+
+const CLASS_LABELS = {
+  it: { bard:'Bardo', cleric:'Chierico', druid:'Druido', paladin:'Paladino', ranger:'Ranger', sorcerer:'Stregone', warlock:'Warlock', wizard:'Mago', artificer:'Artefice', fighter:'Guerriero', rogue:'Ladro' },
+  en: { bard:'Bard', cleric:'Cleric', druid:'Druid', paladin:'Paladin', ranger:'Ranger', sorcerer:'Sorcerer', warlock:'Warlock', wizard:'Wizard', artificer:'Artificer', fighter:'Fighter', rogue:'Rogue' },
+};
+
+// ─── Data & State ─────────────────────────────────────────────────────────────
 let allSpells = [];
+const DB_CACHE = {};
 const filters = { classes: new Set(), levels: new Set(), schools: new Set(), actions: new Set() };
 let searchQuery = '';
 let sortBy = 'name';
-let currentView = 'all'; // 'all' | 'saved'
-let savedSlugs = new Set(JSON.parse(localStorage.getItem('savedSpells') || '[]'));
+let currentView = 'all';
+let savedSlugs = new Set(JSON.parse(localStorage.getItem(`savedSpells_${currentLang}`) || '[]'));
 
-// ─── Label helpers ──────────────────────────────────────────────────────────
-const LEVEL_LABELS = {
-  0: 'Trucchetto', 1: '1° Livello', 2: '2° Livello', 3: '3° Livello',
-  4: '4° Livello', 5: '5° Livello', 6: '6° Livello', 7: '7° Livello',
-  8: '8° Livello', 9: '9° Livello',
-};
-const SCHOOL_IT = {
-  abjuration: 'Abiurazione', conjuration: 'Congiurazione', divination: 'Divinazione',
-  enchantment: 'Ammaliamento', evocation: 'Evocazione', illusion: 'Illusione',
-  necromancy: 'Negromanzia', transmutation: 'Trasmutazione',
-};
-const ACTION_IT = {
-  action: 'Azione', bonus_action: 'Azione Bonus', reaction: 'Reazione',
-  '1 minute': '1 Minuto', '10 minutes': '10 Minuti', '1 hour': '1 Ora',
-  'special': 'Speciale',
-};
-const CLASS_IT = {
-  bard: 'Bardo', cleric: 'Chierico', druid: 'Druido', paladin: 'Paladino',
-  ranger: 'Ranger', sorcerer: 'Stregone', warlock: 'Warlock', wizard: 'Mago',
-  artificer: 'Artefice', fighter: 'Guerriero', rogue: 'Ladro',
-};
-
-function levelLabel(l) { return LEVEL_LABELS[l] ?? `${l}° Livello`; }
-function schoolIt(s)   { return SCHOOL_IT[s]   ?? capitalize(s); }
-function actionIt(a)   { return ACTION_IT[a]   ?? capitalize(a?.replace(/_/g, ' ') ?? ''); }
-function classIt(c)    { return CLASS_IT[c]    ?? capitalize(c); }
+// ─── Label helpers ────────────────────────────────────────────────────────────
 function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+function levelLabel(l) { return LEVEL_LABELS[currentLang][l] ?? `${l}°`; }
+function schoolLabel(s) { return SCHOOL_LABELS[currentLang][s] ?? capitalize(s); }
+function actionLabel(a) { return ACTION_LABELS[currentLang][a] ?? capitalize(a?.replace(/_/g, ' ') ?? ''); }
+function classLabel(c)  { return CLASS_LABELS[currentLang][c] ?? capitalize(c); }
+function spellName(s)   { return currentLang === 'it' ? (s.name_it || s.name) : s.name; }
+function spellDesc(s)   { return currentLang === 'it' ? (s.description_it || s.description) : (s.description || s.description_it); }
 
-// ─── Saved spells ────────────────────────────────────────────────────────────
+// ─── English DB normalization ─────────────────────────────────────────────────
+function normalizeEnglishSpell(s) {
+  const actionType = s.castingTime
+    ? s.castingTime.toLowerCase()
+    : (s.actionType === 'bonusAction' ? 'bonus_action' : (s.actionType || null));
+  return {
+    slug:             s.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ''),
+    name:             s.name,
+    name_it:          null,
+    level:            s.level,
+    school:           (s.school || '').toLowerCase(),
+    classes:          s.classes || [],
+    action_type:      actionType,
+    concentration:    s.concentration || false,
+    ritual:           s.ritual || false,
+    range:            s.range || null,
+    components:       (s.components || []).map(c => c.toUpperCase()),
+    material:         s.material || null,
+    duration:         s.duration || null,
+    description:      s.description || null,
+    description_it:   null,
+    cantrip_upgrade:  s.cantripUpgrade || null,
+    higher_level_slot:s.higherLevelSlot || null,
+    saving_throw:     null,
+    attack_roll:      false,
+    damage:           null,
+    area_of_effect:   null,
+  };
+}
+
+// ─── Data loading ─────────────────────────────────────────────────────────────
+async function loadSpells() {
+  if (DB_CACHE[currentLang]) return DB_CACHE[currentLang];
+  const res = await fetch(STRINGS[currentLang].dbFile);
+  const raw = await res.json();
+  DB_CACHE[currentLang] = currentLang === 'en' ? raw.map(normalizeEnglishSpell) : raw;
+  return DB_CACHE[currentLang];
+}
+
+// ─── Saved spells ─────────────────────────────────────────────────────────────
 function persistSaved() {
-  localStorage.setItem('savedSpells', JSON.stringify([...savedSlugs]));
+  localStorage.setItem(`savedSpells_${currentLang}`, JSON.stringify([...savedSlugs]));
 }
 
 function toggleSaved(slug, e) {
   e.stopPropagation();
+  const t = STRINGS[currentLang];
   if (savedSlugs.has(slug)) {
     savedSlugs.delete(slug);
   } else {
@@ -53,16 +185,14 @@ function toggleSaved(slug, e) {
   if (currentView === 'saved') {
     render();
   } else {
-    // just update the bookmark icon on the card
     const btn = document.querySelector(`.btn-bookmark[data-slug="${slug}"]`);
     if (btn) {
       btn.classList.toggle('saved', savedSlugs.has(slug));
-      btn.title = savedSlugs.has(slug) ? 'Rimuovi dai salvati' : 'Salva incantesimo';
+      btn.title = savedSlugs.has(slug) ? t.bookmarkRemove : t.bookmarkSave;
       btn.innerHTML = savedSlugs.has(slug) ? '&#9733;' : '&#9734;';
     }
     const card = btn?.closest('.spell-card');
     if (card) card.classList.toggle('saved', savedSlugs.has(slug));
-    // update modal bookmark if open
     syncModalBookmark(slug);
   }
 }
@@ -74,15 +204,68 @@ function updateSavedBadge() {
 }
 
 function syncModalBookmark(slug) {
+  const t = STRINGS[currentLang];
   const btn = document.getElementById('modal-bookmark-btn');
   if (!btn || btn.dataset.slug !== slug) return;
   const isSaved = savedSlugs.has(slug);
   btn.classList.toggle('saved', isSaved);
-  btn.title = isSaved ? 'Rimuovi dai salvati' : 'Salva incantesimo';
-  btn.innerHTML = isSaved ? '&#9733; Salvato' : '&#9734; Salva';
+  btn.title = isSaved ? t.bookmarkRemove : t.bookmarkSave;
+  btn.innerHTML = isSaved ? t.bookmarkSaved : t.bookmarkUnsaved;
 }
 
-// ─── View switching ──────────────────────────────────────────────────────────
+// ─── Language switching ───────────────────────────────────────────────────────
+async function switchLanguage(lang) {
+  if (lang === currentLang) return;
+  currentLang = lang;
+  localStorage.setItem('spellLang', lang);
+  savedSlugs = new Set(JSON.parse(localStorage.getItem(`savedSpells_${currentLang}`) || '[]'));
+
+  filters.classes.clear(); filters.levels.clear(); filters.schools.clear(); filters.actions.clear();
+  searchQuery = '';
+  document.getElementById('search').value = '';
+  sortBy = 'name';
+  document.getElementById('sort-select').value = 'name';
+  currentView = 'all';
+  document.getElementById('sidebar').classList.remove('hidden');
+  document.querySelector('.layout').classList.remove('full-width');
+  document.querySelectorAll('.view-tab').forEach(tab => tab.classList.toggle('active', tab.dataset.view === 'all'));
+
+  allSpells = await loadSpells();
+  applyStrings();
+  buildFilters();
+  updateSavedBadge();
+  render();
+}
+
+function applyStrings() {
+  const t = STRINGS[currentLang];
+  document.documentElement.lang = currentLang;
+  document.title = `${t.title} — D&D 2024`;
+  document.getElementById('header-title').textContent = `◆ ${t.title} ◆`;
+  document.getElementById('sidebar-title').textContent = t.filters;
+  document.getElementById('search').placeholder = t.searchPlaceholder;
+  document.querySelector('#group-class .filter-group-title').textContent = t.filterClass;
+  document.querySelector('#group-level .filter-group-title').textContent = t.filterLevel;
+  document.querySelector('#group-school .filter-group-title').textContent = t.filterSchool;
+  document.querySelector('#group-action .filter-group-title').textContent = t.filterAction;
+  document.getElementById('btn-reset').textContent = t.resetBtn;
+  const sortSel = document.getElementById('sort-select');
+  sortSel.options[0].text = t.sortName;
+  sortSel.options[1].text = t.sortLevel;
+  sortSel.options[2].text = t.sortSchool;
+  document.getElementById('tab-all').textContent = t.tabAll;
+  document.getElementById('tab-saved-text').textContent = t.tabSaved;
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === currentLang));
+  updateResultsLabel();
+}
+
+function updateResultsLabel() {
+  const t = STRINGS[currentLang];
+  const label = currentView === 'saved' ? t.resultsSaved : t.resultsFound;
+  document.getElementById('results-label').innerHTML = `${label}: <span id="count">0</span>`;
+}
+
+// ─── View switching ───────────────────────────────────────────────────────────
 function setView(view) {
   currentView = view;
   document.querySelectorAll('.view-tab').forEach(t => t.classList.toggle('active', t.dataset.view === view));
@@ -91,16 +274,15 @@ function setView(view) {
   if (view === 'saved') {
     sidebar.classList.add('hidden');
     layout.classList.add('full-width');
-    document.getElementById('results-label').innerHTML = 'Incantesimi salvati: <span id="count">0</span>';
   } else {
     sidebar.classList.remove('hidden');
     layout.classList.remove('full-width');
-    document.getElementById('results-label').innerHTML = 'Incantesimi trovati: <span id="count">0</span>';
   }
+  updateResultsLabel();
   render();
 }
 
-// ─── Build filter UI ─────────────────────────────────────────────────────────
+// ─── Build filter UI ──────────────────────────────────────────────────────────
 function buildFilters() {
   const classes = new Set(), levels = new Set(), schools = new Set(), actions = new Set();
   allSpells.forEach(s => {
@@ -110,10 +292,10 @@ function buildFilters() {
     if (s.action_type)  actions.add(s.action_type);
   });
 
-  renderFilterGroup('filter-class',  [...classes].sort(),       c => classIt(c),   filters.classes, toggleClass);
-  renderFilterGroup('filter-level',  [...levels].sort((a,b) => a-b), l => levelLabel(l), filters.levels, toggleLevel);
-  renderFilterGroup('filter-school', [...schools].sort(),       s => schoolIt(s),  filters.schools, toggleSchool);
-  renderFilterGroup('filter-action', [...actions].sort(),       a => actionIt(a),  filters.actions, toggleAction);
+  renderFilterGroup('filter-class',  [...classes].sort(),            c => classLabel(c),  filters.classes, toggleClass);
+  renderFilterGroup('filter-level',  [...levels].sort((a,b) => a-b), l => levelLabel(l),  filters.levels,  toggleLevel);
+  renderFilterGroup('filter-school', [...schools].sort(),            s => schoolLabel(s), filters.schools, toggleSchool);
+  renderFilterGroup('filter-action', [...actions].sort(),            a => actionLabel(a), filters.actions, toggleAction);
 }
 
 function renderFilterGroup(containerId, values, labelFn, activeSet, toggleFn) {
@@ -146,13 +328,13 @@ function countFor(groupId, value) {
   }).length;
 }
 
-// ─── Toggle handlers ─────────────────────────────────────────────────────────
+// ─── Toggle handlers ──────────────────────────────────────────────────────────
 function toggleClass(v, on)  { on ? filters.classes.add(v)  : filters.classes.delete(v);  render(); }
 function toggleLevel(v, on)  { on ? filters.levels.add(v)   : filters.levels.delete(v);   render(); }
 function toggleSchool(v, on) { on ? filters.schools.add(v)  : filters.schools.delete(v);  render(); }
 function toggleAction(v, on) { on ? filters.actions.add(v)  : filters.actions.delete(v);  render(); }
 
-// ─── Filtering & sorting ─────────────────────────────────────────────────────
+// ─── Filtering & sorting ──────────────────────────────────────────────────────
 function filteredSpells() {
   const pool = currentView === 'saved'
     ? allSpells.filter(s => savedSlugs.has(s.slug))
@@ -160,22 +342,23 @@ function filteredSpells() {
 
   const q = searchQuery.toLowerCase().trim();
   return pool.filter(s => {
-    if (q && !(s.name_it?.toLowerCase().includes(q) || s.name?.toLowerCase().includes(q))) return false;
-    if (currentView === 'saved') return true; // no extra filters in saved view
+    if (q && !spellName(s).toLowerCase().includes(q)) return false;
+    if (currentView === 'saved') return true;
     if (filters.classes.size && !(s.classes||[]).some(c => filters.classes.has(c))) return false;
     if (filters.levels.size  && !filters.levels.has(String(s.level)))  return false;
     if (filters.schools.size && !filters.schools.has(s.school))  return false;
     if (filters.actions.size && !filters.actions.has(s.action_type)) return false;
     return true;
   }).sort((a, b) => {
-    if (sortBy === 'level')  return a.level - b.level || (a.name_it||'').localeCompare(b.name_it||'');
-    if (sortBy === 'school') return (a.school||'').localeCompare(b.school||'') || (a.name_it||'').localeCompare(b.name_it||'');
-    return (a.name_it||'').localeCompare(b.name_it||'');
+    if (sortBy === 'level')  return a.level - b.level || spellName(a).localeCompare(spellName(b));
+    if (sortBy === 'school') return (a.school||'').localeCompare(b.school||'') || spellName(a).localeCompare(spellName(b));
+    return spellName(a).localeCompare(spellName(b));
   });
 }
 
 // ─── Render cards ─────────────────────────────────────────────────────────────
 function render() {
+  const t = STRINGS[currentLang];
   const spells = filteredSpells();
   document.getElementById('count').textContent = spells.length;
   const grid = document.getElementById('spell-grid');
@@ -183,8 +366,8 @@ function render() {
 
   if (spells.length === 0) {
     const msg = currentView === 'saved'
-      ? '<div class="empty-state-icon">&#9734;</div><div class="empty-state-text">Nessun incantesimo salvato.<br>Clicca &#9734; su una card per aggiungerlo.</div>'
-      : '<div class="empty-state-icon">&#9760;</div><div class="empty-state-text">Nessun incantesimo trovato</div>';
+      ? `<div class="empty-state-icon">&#9734;</div><div class="empty-state-text">${t.emptyNoSaved}</div>`
+      : `<div class="empty-state-icon">&#9760;</div><div class="empty-state-text">${t.emptyNoResults}</div>`;
     grid.innerHTML = `<div class="empty-state">${msg}</div>`;
     return;
   }
@@ -200,17 +383,20 @@ function render() {
       frag.appendChild(hdr);
     }
 
-    const isSaved = savedSlugs.has(spell.slug);
+    const isSaved  = savedSlugs.has(spell.slug);
+    const mainName = spellName(spell);
+    const subName  = currentLang === 'it' && spell.name && spell.name !== mainName ? spell.name : null;
+
     const card = document.createElement('div');
     card.className = `spell-card school-${spell.school || 'unknown'}${isSaved ? ' saved' : ''}`;
 
     const badges = [
-      spell.concentration ? '<span class="badge badge-concentration">Concentrazione</span>' : '',
-      spell.ritual        ? '<span class="badge badge-ritual">Rituale</span>' : '',
+      spell.concentration ? `<span class="badge badge-concentration">${t.concentration}</span>` : '',
+      spell.ritual        ? `<span class="badge badge-ritual">${t.ritual}</span>`               : '',
     ].filter(Boolean).join('');
 
     const classes = (spell.classes||[]).map(c =>
-      `<span class="class-pill class-${c}">${classIt(c)}</span>`
+      `<span class="class-pill class-${c}">${classLabel(c)}</span>`
     ).join('');
 
     const components = (spell.components||[]).join(', ');
@@ -218,24 +404,24 @@ function render() {
     card.innerHTML = `
       <div class="card-header">
         <div>
-          <div class="card-name">${spell.name_it || spell.name}</div>
-          ${spell.name_it !== spell.name ? `<div class="card-name-en">${spell.name}</div>` : ''}
+          <div class="card-name">${mainName}</div>
+          ${subName ? `<div class="card-name-en">${subName}</div>` : ''}
         </div>
         <div style="display:flex;align-items:center;gap:.4rem;flex-shrink:0">
           <button class="btn-bookmark${isSaved ? ' saved' : ''}" data-slug="${spell.slug}"
-            title="${isSaved ? 'Rimuovi dai salvati' : 'Salva incantesimo'}">
+            title="${isSaved ? t.bookmarkRemove : t.bookmarkSave}">
             ${isSaved ? '&#9733;' : '&#9734;'}
           </button>
           <div class="card-level-badge">${levelLabel(spell.level)}</div>
         </div>
       </div>
       <div class="card-meta">
-        <span class="card-school school-${spell.school}">${schoolIt(spell.school)}</span>
-        <span class="card-action">${actionIt(spell.action_type)}</span>
+        <span class="card-school school-${spell.school}">${schoolLabel(spell.school)}</span>
+        <span class="card-action">${actionLabel(spell.action_type)}</span>
       </div>
       ${badges ? `<div class="card-badges">${badges}</div>` : ''}
       <div class="card-classes">${classes}</div>
-      ${components ? `<div class="card-components">Componenti: <strong>${components}</strong></div>` : ''}
+      ${components ? `<div class="card-components">${t.cardComponents} <strong>${components}</strong></div>` : ''}
     `;
 
     card.querySelector('.btn-bookmark').addEventListener('click', e => toggleSaved(spell.slug, e));
@@ -247,9 +433,10 @@ function render() {
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
 function openModal(spell) {
-  const overlay  = document.getElementById('modal-overlay');
-  const topBar   = document.getElementById('modal-top-bar');
-  const body     = document.getElementById('modal-body');
+  const t       = STRINGS[currentLang];
+  const overlay = document.getElementById('modal-overlay');
+  const topBar  = document.getElementById('modal-top-bar');
+  const body    = document.getElementById('modal-body');
 
   topBar.className = `modal-top-bar school-${spell.school}`;
   const schoolColors = {
@@ -260,25 +447,28 @@ function openModal(spell) {
   topBar.style.background = schoolColors[spell.school] || '#7c5cbf';
 
   const components = (spell.components||[]).join(', ');
-  const classes    = (spell.classes||[]).map(c => `<span class="class-pill class-${c}">${classIt(c)}</span>`).join('');
+  const classes    = (spell.classes||[]).map(c => `<span class="class-pill class-${c}">${classLabel(c)}</span>`).join('');
   const isSaved    = savedSlugs.has(spell.slug);
+  const mainName   = spellName(spell);
+  const subName    = currentLang === 'it' && spell.name && spell.name !== mainName ? spell.name : null;
+  const desc       = spellDesc(spell);
 
   const badges = [
-    spell.concentration ? '<span class="badge badge-concentration">Concentrazione</span>' : '',
-    spell.ritual        ? '<span class="badge badge-ritual">Rituale</span>'               : '',
-    spell.attack_roll   ? '<span class="badge" style="background:rgba(232,85,85,.12);color:#e85555;border:1px solid rgba(232,85,85,.3)">Tiro per colpire</span>' : '',
+    spell.concentration ? `<span class="badge badge-concentration">${t.concentration}</span>`  : '',
+    spell.ritual        ? `<span class="badge badge-ritual">${t.ritual}</span>`                : '',
+    spell.attack_roll   ? `<span class="badge" style="background:rgba(232,85,85,.12);color:#e85555;border:1px solid rgba(232,85,85,.3)">${t.attackRoll}</span>` : '',
   ].filter(Boolean).join('');
 
   const stats = [
-    ['Livello',    levelLabel(spell.level)],
-    ['Scuola',     schoolIt(spell.school)],
-    ['Azione',     actionIt(spell.action_type)],
-    ['Gittata',    spell.range || '—'],
-    ['Durata',     spell.duration || '—'],
-    ['Componenti', components || '—'],
-    spell.saving_throw   ? ['Tiro Salvezza', spell.saving_throw]   : null,
-    spell.damage         ? ['Danno', spell.damage]                  : null,
-    spell.area_of_effect ? ['Area', spell.area_of_effect]           : null,
+    [t.statLevel,      levelLabel(spell.level)],
+    [t.statSchool,     schoolLabel(spell.school)],
+    [t.statAction,     actionLabel(spell.action_type)],
+    [t.statRange,      spell.range    || '—'],
+    [t.statDuration,   spell.duration || '—'],
+    [t.statComponents, components     || '—'],
+    spell.saving_throw   ? [t.statSavingThrow, spell.saving_throw]   : null,
+    spell.damage         ? [t.statDamage,       spell.damage]          : null,
+    spell.area_of_effect ? [t.statArea,         spell.area_of_effect]  : null,
   ].filter(Boolean);
 
   const statsHtml = stats.map(([label, val]) => `
@@ -290,19 +480,19 @@ function openModal(spell) {
   body.innerHTML = `
     <div class="modal-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem">
       <div>
-        <div class="modal-title">${spell.name_it || spell.name}</div>
-        ${spell.name_it !== spell.name ? `<div class="modal-title-en">${spell.name}</div>` : ''}
+        <div class="modal-title">${mainName}</div>
+        ${subName ? `<div class="modal-title-en">${subName}</div>` : ''}
       </div>
       <button id="modal-bookmark-btn" data-slug="${spell.slug}"
         class="btn-bookmark${isSaved ? ' saved' : ''}"
-        title="${isSaved ? 'Rimuovi dai salvati' : 'Salva incantesimo'}"
+        title="${isSaved ? t.bookmarkRemove : t.bookmarkSave}"
         style="font-size:1.3rem;padding:.25rem .5rem;border:1px solid var(--border);border-radius:6px;margin-top:.2rem">
-        ${isSaved ? '&#9733; Salvato' : '&#9734; Salva'}
+        ${isSaved ? t.bookmarkSaved : t.bookmarkUnsaved}
       </button>
     </div>
 
     <div class="modal-tags">
-      <span class="card-school school-${spell.school}">${schoolIt(spell.school)}</span>
+      <span class="card-school school-${spell.school}">${schoolLabel(spell.school)}</span>
       ${badges}
     </div>
 
@@ -310,23 +500,23 @@ function openModal(spell) {
 
     <div class="modal-stats">${statsHtml}</div>
 
-    ${spell.material ? `<div class="modal-material"><strong>Materiale:</strong> ${spell.material}</div>` : ''}
+    ${spell.material ? `<div class="modal-material"><strong>${t.modalMaterial}</strong> ${spell.material}</div>` : ''}
 
-    ${spell.description_it ? `
+    ${desc ? `
       <div style="margin-top:1.25rem">
-        <div class="modal-desc-title">Descrizione</div>
-        <div class="modal-desc">${spell.description_it.replace(/\n/g,'<br>')}</div>
+        <div class="modal-desc-title">${t.modalDescription}</div>
+        <div class="modal-desc">${desc.replace(/\n/g,'<br>')}</div>
       </div>` : ''}
 
     ${spell.higher_level_slot ? `
       <div class="modal-higher">
-        <div class="modal-desc-title">Slot di Livello Superiore</div>
+        <div class="modal-desc-title">${t.modalHigherLevel}</div>
         <div class="modal-desc">${spell.higher_level_slot}</div>
       </div>` : ''}
 
     ${spell.cantrip_upgrade && !spell.higher_level_slot ? `
       <div class="modal-higher">
-        <div class="modal-desc-title">Trucchetto Potenziato</div>
+        <div class="modal-desc-title">${t.modalCantripUpgrade}</div>
         <div class="modal-desc">${spell.cantrip_upgrade}</div>
       </div>` : ''}
   `;
@@ -377,20 +567,24 @@ document.querySelectorAll('.view-tab').forEach(tab => {
   tab.addEventListener('click', () => setView(tab.dataset.view));
 });
 
-// ─── Bootstrap ───────────────────────────────────────────────────────────────
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+});
+
+// ─── Bootstrap ────────────────────────────────────────────────────────────────
 async function init() {
+  applyStrings();
   try {
-    const res = await fetch('incantesimi_db.json');
-    allSpells = await res.json();
+    allSpells = await loadSpells();
     buildFilters();
     updateSavedBadge();
     render();
   } catch (err) {
+    const t = STRINGS[currentLang];
     document.getElementById('spell-grid').innerHTML = `
       <div class="empty-state">
         <div class="empty-state-icon">&#9888;</div>
-        <div class="empty-state-text">Errore nel caricamento degli incantesimi.<br>
-          Apri il sito tramite un server locale (es. <code>npx serve .</code>).</div>
+        <div class="empty-state-text">${t.loadError}</div>
       </div>`;
     console.error(err);
   }

@@ -10,13 +10,18 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-title">&#9670; Libro degli Incantesimi &#9670;</div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="it" title="Italiano">&#127470;&#127481;</button>
+      <button class="lang-btn" data-lang="en" title="English">&#127468;&#127463;</button>
+    </div>
+    <div class="header-title" id="header-title">&#9670; Libro degli Incantesimi &#9670;</div>
     <div class="header-subtitle">Dungeons &amp; Dragons 2024</div>
     <div class="header-divider"></div>
     <nav class="view-tabs">
-      <button class="view-tab active" data-view="all">Tutti gli Incantesimi</button>
+      <button class="view-tab active" id="tab-all" data-view="all">Tutti gli Incantesimi</button>
       <button class="view-tab" data-view="saved">
-        &#9733; Salvati <span class="saved-count-badge" id="saved-count-badge">0</span>
+        &#9733; <span id="tab-saved-text">Salvati</span>
+        <span class="saved-count-badge" id="saved-count-badge">0</span>
       </button>
     </nav>
   </div>
@@ -25,7 +30,7 @@
 <div class="layout">
   <!-- Sidebar filters -->
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-title">&#9670; Filtri</div>
+    <div class="sidebar-title" id="sidebar-title">&#9670; Filtri</div>
 
     <div class="search-wrap">
       <span class="search-icon">&#128269;</span>

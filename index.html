@@ -4,11 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Libro degli Incantesimi — D&D 2024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<div class="stars" aria-hidden="true"></div>
+
 <header>
+  <div class="arcane-seal" aria-hidden="true"></div>
   <div class="header-inner">
     <div class="lang-toggle">
       <button class="lang-btn active" data-lang="it" title="Italiano">&#127470;&#127481;</button>
@@ -16,7 +21,11 @@
     </div>
     <div class="header-title" id="header-title">&#9670; Libro degli Incantesimi &#9670;</div>
     <div class="header-subtitle">Dungeons &amp; Dragons 2024</div>
-    <div class="header-divider"></div>
+    <div class="header-divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-gem">&#9670;</span>
+      <span class="divider-line"></span>
+    </div>
     <nav class="view-tabs">
       <button class="view-tab active" id="tab-all" data-view="all">Tutti gli Incantesimi</button>
       <button class="view-tab" data-view="saved">

@@ -439,12 +439,13 @@ function openModal(spell) {
   const body    = document.getElementById('modal-body');
 
   topBar.className = `modal-top-bar school-${spell.school}`;
+  document.getElementById('modal').className = `modal school-${spell.school}`;
   const schoolColors = {
-    abjuration:'#5b9bd5', conjuration:'#e8a030', divination:'#85c1e9',
-    enchantment:'#d98ce8', evocation:'#e85555', illusion:'#9b59b6',
-    necromancy:'#2ecc71', transmutation:'#c9a84c',
+    abjuration:'#5a9ed8', conjuration:'#e8a030', divination:'#78c8f0',
+    enchantment:'#d870e0', evocation:'#e83838', illusion:'#9050c0',
+    necromancy:'#28c060', transmutation:'#c89810',
   };
-  topBar.style.background = schoolColors[spell.school] || '#7c5cbf';
+  topBar.style.background = schoolColors[spell.school] || '#7044c0';
 
   const components = (spell.components||[]).join(', ');
   const classes    = (spell.classes||[]).map(c => `<span class="class-pill class-${c}">${classLabel(c)}</span>`).join('');

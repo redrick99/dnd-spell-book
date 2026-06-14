@@ -1298,9 +1298,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "disco-fluttuante",
-    "name": "Disco Fluttuante",
-    "name_it": "Disco fluttuante",
+    "slug": "disco-fluttuante-di-tenser",
+    "name": "Disco Fluttuante di Tenser",
+    "name_it": "Disco Fluttuante di Tenser",
     "level": 1,
     "school": "evocation",
     "classes": [
@@ -2036,9 +2036,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "risata-incontenibile",
-    "name": "Risata Incontenibile",
-    "name_it": "Risata incontenibile",
+    "slug": "risata-incontenibile-di-tasha",
+    "name": "Risata Incontenibile di Tasha",
+    "name_it": "Risata Incontenibile di Tasha",
     "level": 1,
     "school": "enchantment",
     "classes": [
@@ -2693,9 +2693,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "aura-magica-dell-arcanista",
-    "name": "Aura Magica Dell Arcanista",
-    "name_it": "Aura magica dell'arcanista",
+    "slug": "aura-magica-di-nystul",
+    "name": "Aura Magica di Nystul",
+    "name_it": "Aura Magica di Nystul",
     "level": 2,
     "school": "illusion",
     "classes": [
@@ -3031,9 +3031,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "freccia-acida",
-    "name": "Freccia Acida",
-    "name_it": "Freccia acida",
+    "slug": "freccia-acida-di-melf",
+    "name": "Freccia Acida di Melf",
+    "name_it": "Freccia Acida di Melf",
     "level": 2,
     "school": "evocation",
     "classes": [
@@ -4229,9 +4229,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "capanna",
-    "name": "Capanna",
-    "name_it": "Capanna",
+    "slug": "capanna-di-leomund",
+    "name": "Capanna di Leomund",
+    "name_it": "Capanna di Leomund",
     "level": 3,
     "school": "evocation",
     "classes": [
@@ -6144,9 +6144,9 @@
     "area_of_effect": "cono 4d6"
   },
   {
-    "slug": "santuario-privato",
-    "name": "Santuario Privato",
-    "name_it": "Santuario privato",
+    "slug": "santuario-privato-di-mordenkainen",
+    "name": "Santuario Privato di Mordenkainen",
+    "name_it": "Santuario Privato di Mordenkainen",
     "level": 4,
     "school": "abjuration",
     "classes": [
@@ -6204,9 +6204,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "scrigno-segreto",
-    "name": "Scrigno Segreto",
-    "name_it": "Scrigno segreto",
+    "slug": "scrigno-segreto-di-leomund",
+    "name": "Scrigno Segreto di Leomund",
+    "name_it": "Scrigno Segreto di Leomund",
     "level": 4,
     "school": "evocation",
     "classes": [
@@ -6264,9 +6264,9 @@
     "area_of_effect": "raggio 3 metri"
   },
   {
-    "slug": "segugio-fedele",
-    "name": "Segugio Fedele",
-    "name_it": "Segugio fedele",
+    "slug": "segugio-fedele-di-mordenkainen",
+    "name": "Segugio Fedele di Mordenkainen",
+    "name_it": "Segugio Fedele di Mordenkainen",
     "level": 4,
     "school": "evocation",
     "classes": [
@@ -6323,9 +6323,9 @@
     "area_of_effect": "raggio 6 metri"
   },
   {
-    "slug": "sfera-elastica",
-    "name": "Sfera Elastica",
-    "name_it": "Sfera elastica",
+    "slug": "sfera-elastica-di-otiluke",
+    "name": "Sfera Elastica di Otiluke",
+    "name_it": "Sfera Elastica di Otiluke",
     "level": 4,
     "school": "abjuration",
     "classes": [
@@ -6383,9 +6383,9 @@
     "area_of_effect": "raggio 6 metri"
   },
   {
-    "slug": "tentacoli-neri",
-    "name": "Tentacoli Neri",
-    "name_it": "Tentacoli neri",
+    "slug": "tentacoli-neri-di-evard",
+    "name": "Tentacoli Neri di Evard",
+    "name_it": "Tentacoli Neri di Evard",
     "level": 4,
     "school": "evocation",
     "classes": [
@@ -7010,9 +7010,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "legame-telepatico",
-    "name": "Legame Telepatico",
-    "name_it": "Legame telepatico",
+    "slug": "legame-telepatico-di-rary",
+    "name": "Legame Telepatico di Rary",
+    "name_it": "Legame Telepatico di Rary",
     "level": 5,
     "school": "divination",
     "classes": [
@@ -7040,9 +7040,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "mano-arcana",
-    "name": "Mano Arcana",
-    "name_it": "Mano arcana",
+    "slug": "mano-di-bigby",
+    "name": "Mano di Bigby",
+    "name_it": "Mano di Bigby",
     "level": 5,
     "school": "evocation",
     "classes": [
@@ -7881,9 +7881,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "danza-irresistibile",
-    "name": "Danza Irresistibile",
-    "name_it": "Danza irresistibile",
+    "slug": "danza-irresistibile-di-otto",
+    "name": "Danza Irresistibile di Otto",
+    "name_it": "Danza Irresistibile di Otto",
     "level": 6,
     "school": "enchantment",
     "classes": [
@@ -7967,9 +7967,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "evocazioni-istantanee",
-    "name": "Evocazioni Istantanee",
-    "name_it": "Evocazioni istantanee",
+    "slug": "evocazioni-istantanee-di-drawmij",
+    "name": "Evocazioni Istantanee di Drawmij",
+    "name_it": "Evocazioni Istantanee di Drawmij",
     "level": 6,
     "school": "evocation",
     "classes": [
@@ -8318,9 +8318,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "sfera-congelante",
-    "name": "Sfera Congelante",
-    "name_it": "Sfera congelante",
+    "slug": "sfera-congelante-di-otiluke",
+    "name": "Sfera Congelante di Otiluke",
+    "name_it": "Sfera Congelante di Otiluke",
     "level": 6,
     "school": "evocation",
     "classes": [
@@ -8798,9 +8798,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "reggia-meravigliosa",
-    "name": "Reggia Meravigliosa",
-    "name_it": "Reggia meravigliosa",
+    "slug": "reggia-meravigliosa-di-mordenkainen",
+    "name": "Reggia Meravigliosa di Mordenkainen",
+    "name_it": "Reggia Meravigliosa di Mordenkainen",
     "level": 7,
     "school": "evocation",
     "classes": [
@@ -8950,9 +8950,9 @@
     "area_of_effect": null
   },
   {
-    "slug": "spada-arcana",
-    "name": "Spada Arcana",
-    "name_it": "Spada arcana",
+    "slug": "spada-di-mordenkainen",
+    "name": "Spada di Mordenkainen",
+    "name_it": "Spada di Mordenkainen",
     "level": 7,
     "school": "evocation",
     "classes": [
@@ -10044,5 +10044,1523 @@
     "attack_roll": false,
     "damage": null,
     "area_of_effect": null
+  },
+  {
+    "slug": "portale-arcano",
+    "name": "Portale Arcano",
+    "name_it": "Portale arcano",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "150 metri",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 10 minuti",
+    "description": null,
+    "description_it": null,
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "vigore-arcano",
+    "name": "Vigore Arcano",
+    "name_it": "Vigore arcano",
+    "level": 2,
+    "school": "abjuration",
+    "classes": [
+      "sorcerer",
+      "wizard"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Attingendo alla tua forza vitale, ti curi. Tira uno o due Dadi Vita non spesi e recupera un numero di Punti Ferita pari al totale del tiro più il modificatore della tua caratteristica da incantatore. Quei dadi vengono poi spesi. A Slot Superiori: il numero di Dadi Vita non spesi che puoi tirare aumenta di uno per ogni livello di slot superiore al 2°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "Il numero di Dadi Vita non spesi che puoi tirare aumenta di uno per ogni livello di slot superiore al 2°.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "armatura-di-agathys",
+    "name": "Armatura di Agathys",
+    "name_it": "Armatura di Agathys",
+    "level": 1,
+    "school": "abjuration",
+    "classes": [
+      "warlock"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un calice d'acqua",
+    "duration": "1 ora",
+    "description": null,
+    "description_it": "Un gelo magico protettivo ti avvolge. Ottieni 5 Punti Ferita Temporanei. Se una creatura ti colpisce con un tiro per colpire in mischia prima che l'incantesimo termini, la creatura subisce 5 danni da freddo. L'incantesimo termina anticipatamente se non hai più Punti Ferita Temporanei. A Slot Superiori: sia i Punti Ferita Temporanei che i danni da freddo aumentano di 5 per ogni livello di slot superiore al 1°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I Punti Ferita Temporanei e i danni da freddo aumentano di 5 per ogni livello di slot superiore al 1°.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": "5 freddo",
+    "area_of_effect": null
+  },
+  {
+    "slug": "braccia-di-hadar",
+    "name": "Braccia di Hadar",
+    "name_it": "Braccia di Hadar",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "warlock"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Invocando Hadar, fai erompere dei tentacoli da te stesso. Ogni creatura in un'Emanazione di 3 metri originata da te effettua un tiro salvezza su Forza. In caso di fallimento, un bersaglio subisce 2d6 danni necrotici e non può effettuare Reazioni fino all'inizio del suo prossimo turno. In caso di successo, subisce solo la metà dei danni. I danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "saving_throw": "Forza",
+    "attack_roll": false,
+    "damage": "2d6 necrotici",
+    "area_of_effect": "Emanazione 3 m"
+  },
+  {
+    "slug": "aura-di-purezza",
+    "name": "Aura di Purezza",
+    "name_it": "Aura di purezza",
+    "level": 4,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 10 minuti",
+    "description": null,
+    "description_it": "Un'aura si irradia da te in un'Emanazione di 9 metri per la durata dell'incantesimo. Mentre sono nell'aura, tu e i tuoi alleati avete Resistenza ai danni da veleno e Vantaggio ai tiri salvezza per evitare o porre fine agli effetti che includono le condizioni Accecato, Affascinato, Assordato, Impaurito, Paralizzato, Avvelenato o Stordito.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": "Emanazione 9 m"
+  },
+  {
+    "slug": "aura-di-vitalita",
+    "name": "Aura di Vitalità",
+    "name_it": "Aura di vitalità",
+    "level": 3,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "druid",
+      "paladin"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Un'aura si irradia da te in un'Emanazione di 9 metri per la durata dell'incantesimo. Quando crei l'aura e all'inizio di ciascuno dei tuoi turni mentre persiste, puoi ripristinare 2d6 Punti Ferita a una creatura al suo interno.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": "Emanazione 9 m"
+  },
+  {
+    "slug": "colpo-di-esilio",
+    "name": "Colpo di Esilio",
+    "name_it": "Colpo di esilio",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "bonus action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Quando colpisci una creatura con un'arma da mischia o un Attacco Senz'armi, il bersaglio subisce 5d10 danni da forza extra. Se questi danni riducono il bersaglio a 50 Punti Ferita o meno, il bersaglio deve superare un tiro salvezza su Carisma o essere trasportato in un piano demiplanare innocuo per la durata dell'incantesimo, dove diventa Incapacitato. Quando l'incantesimo termina, il bersaglio riappare dove si trovava o nello spazio non occupato più vicino.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Carisma",
+    "attack_roll": true,
+    "damage": "5d10 forza",
+    "area_of_effect": null
+  },
+  {
+    "slug": "sensi-della-bestia",
+    "name": "Sensi della Bestia",
+    "name_it": "Sensi della bestia",
+    "level": 2,
+    "school": "divination",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": true,
+    "range": "contatto",
+    "components": [
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Tocchi una Bestia consenziente. Per la durata dell'incantesimo, puoi percepire attraverso i sensi della Bestia oltre che attraverso i tuoi. Quando percepisci attraverso i sensi della Bestia, benefici di eventuali sensi speciali che essa possiede.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "protezione-dalle-lame",
+    "name": "Protezione dalle Lame",
+    "name_it": "Protezione dalle lame",
+    "level": 0,
+    "school": "abjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Ogni volta che una creatura effettua un tiro per colpire contro di te prima che l'incantesimo termini, l'attaccante sottrae 1d4 dal tiro per colpire.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "colpo-accecante",
+    "name": "Colpo Accecante",
+    "name_it": "Colpo accecante",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "1 minuto",
+    "description": null,
+    "description_it": "Colpendo una creatura con un'arma da mischia o un Attacco Senz'armi, il bersaglio subisce 3d8 danni radiosi extra e acquisisce la condizione Accecato fino al termine dell'incantesimo. Il bersaglio accecato può effettuare un tiro salvezza su Costituzione alla fine di ciascuno dei suoi turni per porre fine all'incantesimo in caso di successo. A Slot Superiori: i danni extra aumentano di 1d8 per ogni livello di slot superiore al 3°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni extra aumentano di 1d8 per ogni livello di slot superiore al 3°.",
+    "saving_throw": "Costituzione",
+    "attack_roll": true,
+    "damage": "3d8 radiosi",
+    "area_of_effect": null
+  },
+  {
+    "slug": "cerchio-di-potere",
+    "name": "Cerchio di Potere",
+    "name_it": "Cerchio di potere",
+    "level": 5,
+    "school": "abjuration",
+    "classes": [
+      "cleric",
+      "paladin",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 10 minuti",
+    "description": null,
+    "description_it": "Un'aura si irradia da te in un'Emanazione di 9 metri per la durata dell'incantesimo. Mentre sono nell'aura, tu e i tuoi alleati avete Vantaggio ai tiri salvezza contro incantesimi e altri effetti magici. Quando una creatura interessata effettua un tiro salvezza contro un incantesimo o un effetto magico che consente un tiro salvezza per subire solo la metà dei danni, non subisce danni in caso di successo.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": "Emanazione 9 m"
+  },
+  {
+    "slug": "nube-di-pugnali",
+    "name": "Nube di Pugnali",
+    "name_it": "Nube di pugnali",
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "18 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un frammento di metallo che fuoriesce da una vecchia ferita",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Evochi pugnali rotanti in un cubo di 1,5 metri centrato su un punto entro gittata. Ogni creatura in quell'area subisce 4d4 danni da taglio. Una creatura subisce questi danni anche se entra nel cubo, vi termina il turno o se il cubo si muove nel suo spazio. Una creatura subisce questi danni solo una volta per turno. Nei tuoi turni successivi, puoi effettuare un'azione Magica per teletrasportare il cubo fino a 9 metri. I danni aumentano di 2d4 per ogni livello di slot superiore al 2°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni aumentano di 2d4 per ogni livello di slot superiore al 2°.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": "4d4 taglio",
+    "area_of_effect": "Cubo 1,5 m"
+  },
+  {
+    "slug": "duello-coatto",
+    "name": "Duello Coatto",
+    "name_it": "Duello coatto",
+    "level": 1,
+    "school": "enchantment",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "bonus action",
+    "concentration": true,
+    "ritual": false,
+    "range": "9 metri",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Tenti di costringere una creatura a un duello. Una creatura che riesci a vedere entro gittata effettua un tiro salvezza su Saggezza. In caso di fallimento, il bersaglio ha Svantaggio ai tiri per colpire contro creature diverse da te e non può allontanarsi volontariamente a più di 9 metri da te. L'incantesimo termina se effettui un tiro per colpire contro una creatura diversa dal bersaglio, lanci un incantesimo su un nemico diverso dal bersaglio, se un tuo alleato danneggia il bersaglio, o se termini il turno a più di 9 metri dal bersaglio.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Saggezza",
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "evoca-raffica",
+    "name": "Evoca Raffica",
+    "name_it": "Evoca raffica",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "l'arma o le munizioni usate per lanciare l'incantesimo",
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Impugni l'arma usata per lanciare l'incantesimo e evochi armi spettrali simili che si lanciano in avanti e poi scompaiono. Ogni creatura a tua scelta che puoi vedere in un Cono di 18 metri effettua un tiro salvezza su Destrezza, subendo 5d8 danni da forza in caso di fallimento o la metà in caso di successo. I danni aumentano di 1d8 per ogni livello di slot superiore al 3°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni aumentano di 1d8 per ogni livello di slot superiore al 3°.",
+    "saving_throw": "Destrezza",
+    "attack_roll": false,
+    "damage": "5d8 forza",
+    "area_of_effect": "Cono 18 m"
+  },
+  {
+    "slug": "evoca-scarica",
+    "name": "Evoca Scarica",
+    "name_it": "Evoca scarica",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "45 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "l'arma o le munizioni usate per lanciare l'incantesimo",
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Impugni l'arma usata per lanciare l'incantesimo e scegli un punto entro gittata. Centinaia di armi spettrali simili cadono in una scarica e poi scompaiono. Ogni creatura a tua scelta che puoi vedere in un Cilindro di 12 metri di raggio e 6 metri di altezza centrato su quel punto effettua un tiro salvezza su Destrezza. Una creatura subisce 8d8 danni da forza in caso di fallimento o la metà in caso di successo.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Destrezza",
+    "attack_roll": false,
+    "damage": "8d8 forza",
+    "area_of_effect": "Cilindro 12 m"
+  },
+  {
+    "slug": "cordone-di-frecce",
+    "name": "Cordone di Frecce",
+    "name_it": "Cordone di frecce",
+    "level": 2,
+    "school": "transmutation",
+    "classes": [
+      "ranger"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "contatto",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "le frecce o i dardi piantati nel terreno",
+    "duration": "8 ore",
+    "description": null,
+    "description_it": "Tocchi fino a quattro frecce o dardi non magici e li pianti nel terreno nel tuo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere sradicate fisicamente. Ogni volta che una creatura diversa da te entra per la prima volta in un turno in uno spazio entro 9 metri dalle munizioni o vi termina il turno, un proiettile vola verso di essa. La creatura deve superare un tiro salvezza su Destrezza o subire 2d4 danni perforanti. Il proiettile viene poi distrutto. L'incantesimo termina quando non rimangono munizioni piantate. La quantità di munizioni aumenta di due per ogni livello di slot superiore al 2°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "La quantità di munizioni che possono essere colpite aumenta di due per ogni livello di slot superiore al 2°.",
+    "saving_throw": "Destrezza",
+    "attack_roll": false,
+    "damage": "2d4 perforanti",
+    "area_of_effect": null
+  },
+  {
+    "slug": "corona-della-follia",
+    "name": "Corona della Follia",
+    "name_it": "Corona della follia",
+    "level": 2,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "36 metri",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Una creatura che riesci a vedere entro gittata deve superare un tiro salvezza su Saggezza o diventare Affascinata per la durata dell'incantesimo. Solo gli Umanoidi sono colpiti. Una corona spettrale appare sulla testa del bersaglio Affascinato, che deve usare la sua azione prima di muoversi in ciascuno dei suoi turni per effettuare un attacco in mischia contro una creatura diversa da sé che scegli mentalmente. Il bersaglio può agire normalmente se non scegli nessuna creatura. Ripete il tiro salvezza alla fine di ciascuno dei suoi turni, ponendo fine all'incantesimo in caso di successo. Nei turni successivi, devi effettuare l'azione Magica per mantenere il controllo, altrimenti l'incantesimo termina.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Saggezza",
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "mantello-del-crociato",
+    "name": "Mantello del Crociato",
+    "name_it": "Mantello del crociato",
+    "level": 3,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Irradi un'aura magica in un'Emanazione di 9 metri. Mentre sono nell'aura, tu e i tuoi alleati infliggete 1d4 danni radiosi extra quando colpite con un'arma o un Attacco Senz'armi.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": "1d4 radiosi",
+    "area_of_effect": "Emanazione 9 m"
+  },
+  {
+    "slug": "onda-distruttiva",
+    "name": "Onda Distruttiva",
+    "name_it": "Onda distruttiva",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Un'energia distruttiva si irradia da te in un'Emanazione di 9 metri. Ogni creatura a tua scelta nell'Emanazione effettua un tiro salvezza su Costituzione. In caso di fallimento, un bersaglio subisce 5d6 danni da tuono e 5d6 danni radiosi o necrotici (a tua scelta) e acquisisce la condizione Prono. In caso di successo, subisce solo la metà dei danni.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Costituzione",
+    "attack_roll": false,
+    "damage": "5d6 tuono, 5d6 radiosi o necrotici",
+    "area_of_effect": "Emanazione 9 m"
+  },
+  {
+    "slug": "arma-elementale",
+    "name": "Arma Elementale",
+    "name_it": "Arma elementale",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "druid",
+      "paladin",
+      "ranger"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "contatto",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Un'arma non magica che tocchi diventa un'arma magica. Scegli uno dei seguenti tipi di danno: acido, freddo, fuoco, fulmine o tuono. Per la durata dell'incantesimo, l'arma ha un bonus +1 ai tiri per colpire e infligge 1d4 danni extra del tipo scelto quando colpisce. A Slot Superiori: con uno slot di 5°–6° livello il bonus aumenta a +2 e i danni extra a 2d4; con uno slot di 7°+ livello il bonus aumenta a +3 e i danni extra a 3d4.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "Con uno slot di 5°–6° livello il bonus aumenta a +2 e i danni extra a 2d4; con uno slot di 7°+ il bonus aumenta a +3 e i danni extra a 3d4.",
+    "saving_throw": null,
+    "attack_roll": true,
+    "damage": "1d4 elemento scelto",
+    "area_of_effect": null
+  },
+  {
+    "slug": "simulare-la-morte",
+    "name": "Simulare la Morte",
+    "name_it": "Simulare la morte",
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": true,
+    "range": "contatto",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "una pizzico di terra di cimitero",
+    "duration": "1 ora",
+    "description": null,
+    "description_it": "Tocchi una creatura consenziente e la metti in uno stato catalettico indistinguibile dalla morte. Per la durata dell'incantesimo, il bersaglio appare morto all'ispezione esterna e agli incantesimi usati per determinarne lo stato. Il bersaglio acquisisce le condizioni Accecato e Incapacitato e la sua Velocità è 0. Ha inoltre Resistenza a tutti i danni tranne quelli psichici e Immunità alla condizione Avvelenato.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "fonte-di-luce-lunare",
+    "name": "Fonte di Luce Lunare",
+    "name_it": "Fonte di luce lunare",
+    "level": 4,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "druid"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 10 minuti",
+    "description": null,
+    "description_it": "Una luce fresca avvolge il tuo corpo per la durata dell'incantesimo, emettendo Luce Intensa in un raggio di 6 metri e Luce Fioca per ulteriori 6 metri. Hai Resistenza ai danni radiosi e i tuoi attacchi in mischia infliggono 2d6 danni radiosi extra in caso di colpo. Inoltre, immediatamente dopo aver subito danni da una creatura che riesci a vedere entro 18 metri da te, puoi effettuare una Reazione per costringerla a effettuare un tiro salvezza su Costituzione. In caso di fallimento, la creatura acquisisce la condizione Accecato fino alla fine del tuo prossimo turno.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Costituzione",
+    "attack_roll": false,
+    "damage": "2d6 radiosi",
+    "area_of_effect": "Emanazione 6 m"
+  },
+  {
+    "slug": "amicizia",
+    "name": "Amicizia",
+    "name_it": "Amicizia",
+    "level": 0,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "3 metri",
+    "components": [
+      "S",
+      "M"
+    ],
+    "material": "un po' di trucco applicato al viso",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Emani magicamente un senso di amicizia verso una creatura che puoi vedere entro gittata. Il bersaglio deve superare un tiro salvezza su Saggezza o acquisire la condizione Affascinato per la durata dell'incantesimo. Il bersaglio supera automaticamente il tiro salvezza se non è un Umanoide, se stai combattendo contro di lui, o se hai lanciato questo incantesimo su di lui nelle ultime 24 ore. L'incantesimo termina anticipatamente se il bersaglio subisce danni o se effettui un tiro per colpire, infliggi danni o costringi qualcuno a effettuare un tiro salvezza. Quando l'incantesimo termina, il bersaglio sa di essere stato Affascinato da te.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Saggezza",
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "vite-afferrante",
+    "name": "Vite Afferrante",
+    "name_it": "Vite afferrante",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "action_type": "bonus action",
+    "concentration": true,
+    "ritual": false,
+    "range": "18 metri",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Evochi una vite che germoglia da una superficie in uno spazio non occupato che riesci a vedere entro gittata. Effettua un attacco con incantesimo in mischia contro una creatura entro 9 metri dalla vite. In caso di colpo, il bersaglio subisce 4d8 danni contundenti e viene trascinato fino a 9 metri verso la vite; se è di Taglia Grande o inferiore, acquisisce la condizione Afferrato (CD di fuga pari alla tua CD del tiro salvezza). Come Azione Bonus nei turni successivi, puoi ripetere l'attacco. Il numero di creature che la vite può afferrare aumenta di uno per ogni livello di slot superiore al 4°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "Il numero di creature che la vite può afferrare aumenta di uno per ogni livello di slot superiore al 4°.",
+    "saving_throw": null,
+    "attack_roll": true,
+    "damage": "4d8 contundenti",
+    "area_of_effect": null
+  },
+  {
+    "slug": "tempesta-di-spine",
+    "name": "Tempesta di Spine",
+    "name_it": "Tempesta di spine",
+    "level": 1,
+    "school": "conjuration",
+    "classes": [
+      "ranger"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Quando colpisci una creatura con un attacco a distanza con arma, puoi lanciare questo incantesimo per creare una pioggia di spine. Il bersaglio e ogni creatura entro 1,5 metri da esso devono effettuare un tiro salvezza su Destrezza, subendo 1d10 danni perforanti in caso di fallimento o la metà in caso di successo. I danni aumentano di 1d10 per ogni livello di slot superiore al 1°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni aumentano di 1d10 per ogni livello di slot superiore al 1°.",
+    "saving_throw": "Destrezza",
+    "attack_roll": false,
+    "damage": "1d10 perforanti",
+    "area_of_effect": null
+  },
+  {
+    "slug": "fame-di-hadar",
+    "name": "Fame di Hadar",
+    "name_it": "Fame di Hadar",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "warlock"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "45 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un po' di carne in putrefazione",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Apri un varco verso il Piano Lontano, creando una sfera di Oscurità di 6 metri di raggio centrata su un punto entro gittata. La sfera è Terreno Difficile, piena di sussurri e rumori di risucchio udibili fino a 9 metri. Nessuna luce può illuminare l'area e le creature completamente al suo interno acquisiscono la condizione Accecato. Ogni creatura che inizia il turno nell'area subisce 2d6 danni da freddo. Ogni creatura che termina il turno nell'area deve superare un tiro salvezza su Destrezza o subire 2d6 danni da acido da tentacoli ultraterreni. A Slot Superiori: i danni da freddo o da acido (a tua scelta) aumentano di 1d6 per ogni livello di slot superiore al 3°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni da freddo o da acido (a tua scelta) aumentano di 1d6 per ogni livello di slot superiore al 3°.",
+    "saving_throw": "Destrezza",
+    "attack_roll": false,
+    "damage": "2d6 freddo, 2d6 acido",
+    "area_of_effect": "Sfera 6 m"
+  },
+  {
+    "slug": "tempesta-di-radiosita-di-jallarzi",
+    "name": "Tempesta di Radiosità di Jallarzi",
+    "name_it": "Tempesta di radiosità di Jallarzi",
+    "level": 5,
+    "school": "evocation",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "36 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un pizzico di fosforo",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Scateni una tempesta di luce sfolgorante e tuono impetuoso in un Cilindro di 3 metri di raggio e 12 metri di altezza centrato su un punto che riesci a vedere entro gittata. Le creature nell'area acquisiscono le condizioni Accecato e Assordato e non possono lanciare incantesimi con componente verbale. Quando la tempesta appare, ogni creatura al suo interno effettua un tiro salvezza su Costituzione, subendo 2d10 danni radiosi e 2d10 danni da tuono in caso di fallimento o la metà in caso di successo. Una creatura effettua questo tiro salvezza anche quando entra per la prima volta nell'area in un turno o vi termina il turno. I danni radiosi e da tuono aumentano di 1d10 ciascuno per ogni livello di slot superiore al 5°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni radiosi e da tuono aumentano di 1d10 ciascuno per ogni livello di slot superiore al 5°.",
+    "saving_throw": "Costituzione",
+    "attack_roll": false,
+    "damage": "2d10 radiosi, 2d10 tuono",
+    "area_of_effect": "Cilindro 3 m"
+  },
+  {
+    "slug": "freccia-fulminante",
+    "name": "Freccia Fulminante",
+    "name_it": "Freccia fulminante",
+    "level": 3,
+    "school": "transmutation",
+    "classes": [
+      "ranger"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Quando il tuo attacco colpisce o manca il bersaglio, l'arma o le munizioni si trasformano in un fulmine. Il bersaglio subisce 4d8 danni da fulmine in caso di colpo o la metà in caso di mancato colpo. Ogni creatura entro 3 metri dal bersaglio effettua un tiro salvezza su Destrezza, subendo 2d8 danni da fulmine in caso di fallimento o la metà in caso di successo. L'arma o le munizioni tornano alla forma normale. I danni aumentano di 1d8 per ogni livello di slot superiore al 3°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni per entrambi gli effetti aumentano di 1d8 per ogni livello di slot superiore al 3°.",
+    "saving_throw": "Destrezza",
+    "attack_roll": true,
+    "damage": "4d8 fulmine",
+    "area_of_effect": null
+  },
+  {
+    "slug": "scheggia-mentale",
+    "name": "Scheggia Mentale",
+    "name_it": "Scheggia mentale",
+    "level": 0,
+    "school": "enchantment",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "18 metri",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "1 round",
+    "description": null,
+    "description_it": "Cerchi di scalfire temporaneamente la mente di una creatura che riesci a vedere entro gittata. Il bersaglio deve superare un tiro salvezza su Intelligenza o subire 1d6 danni psichici e sottrarre 1d4 dal prossimo tiro salvezza che effettua prima della fine del tuo prossimo turno.",
+    "cantrip_upgrade": "I danni aumentano di 1d6 quando l'incantatore raggiunge il 5° livello (2d6), l'11° livello (3d6) e il 17° livello (4d6).",
+    "higher_level_slot": null,
+    "saving_throw": "Intelligenza",
+    "attack_roll": false,
+    "damage": "1d6 psichici",
+    "area_of_effect": null
+  },
+  {
+    "slug": "parola-del-potere-potenziare",
+    "name": "Parola del Potere Potenziare",
+    "name_it": "Parola del potere potenziare",
+    "level": 7,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "cleric"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "18 metri",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": null,
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "colpo-stordente",
+    "name": "Colpo Stordente",
+    "name_it": "Colpo stordente",
+    "level": 4,
+    "school": "enchantment",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Quando colpisci una creatura con un'arma da mischia o un Attacco Senz'armi, il bersaglio subisce 4d6 danni psichici extra. Il bersaglio deve effettuare un tiro salvezza su Saggezza o acquisire la condizione Stordito fino alla fine del tuo prossimo turno. I danni extra aumentano di 1d6 per ogni livello di slot superiore al 4°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni extra aumentano di 1d6 per ogni livello di slot superiore al 4°.",
+    "saving_throw": "Saggezza",
+    "attack_roll": true,
+    "damage": "4d6 psichici",
+    "area_of_effect": null
+  },
+  {
+    "slug": "colpo-del-vento-d-acciaio",
+    "name": "Colpo del Vento d'Acciaio",
+    "name_it": "Colpo del vento d'acciaio",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "ranger",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "9 metri",
+    "components": [
+      "S",
+      "M"
+    ],
+    "material": "un'arma da mischia del valore di almeno 1 mr",
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Impugni l'arma usata per lanciare l'incantesimo e poi svanisci per colpire come il vento. Scegli fino a cinque creature che riesci a vedere entro gittata. Effettua un attacco con incantesimo in mischia contro ciascun bersaglio. In caso di colpo, un bersaglio subisce 6d10 danni da forza. Ti teleporti poi in uno spazio non occupato che riesci a vedere entro 1,5 metri da uno dei bersagli.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": true,
+    "damage": "6d10 forza",
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-aberrazione",
+    "name": "Convoca Aberrazione",
+    "name_it": "Convoca aberrazione",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "una statuetta dell'aberrazione del valore di almeno 400 mr",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito aberrante in uno spazio non occupato entro gittata usando il blocco di statistiche Spirito Aberrante. Scegli Occhietto, Flagellatore Mentale o Slaad per determinare l'aspetto e i dettagli del blocco di statistiche. La creatura è tua alleata, condivide la tua Iniziativa ma agisce dopo di te. Obbedisce ai tuoi comandi verbali; se non ne impartisci, effettua l'azione Schivata e si allontana dal pericolo. Scompare a 0 PF o quando l'incantesimo termina. L'uso di uno slot superiore applica il livello di quel slot al blocco di statistiche.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "L'uso di uno slot superiore applica il livello di quel slot al blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-bestia",
+    "name": "Convoca Bestia",
+    "name_it": "Convoca bestia",
+    "level": 2,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "una piuma, squama o pelo dell'ambiente scelto",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito bestiale che si manifesta in uno spazio non occupato entro gittata usando il blocco di statistiche Spirito Bestiale. Scegli un ambiente (Aria, Terra o Acqua) per determinare l'aspetto della creatura. La creatura è tua alleata, condivide la tua Iniziativa e agisce dopo di te. Obbedisce ai tuoi comandi verbali o effettua l'azione Schivata se non ne riceve. Scompare quando raggiunge 0 Punti Ferita o quando l'incantesimo termina. L'uso di uno slot superiore ne aumenta la potenza di conseguenza.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "L'uso di uno slot superiore ne aumenta la potenza di conseguenza.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-celestiale",
+    "name": "Convoca Celestiale",
+    "name_it": "Convoca celestiale",
+    "level": 5,
+    "school": "conjuration",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un'offerta votiva del valore di almeno 500 mr",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito celestiale che si manifesta in forma angelica in uno spazio non occupato entro gittata, usando il blocco di statistiche Spirito Celestiale. Scegli Vendicatore o Difensore, che determina i dettagli specifici del blocco di statistiche. La creatura è tua alleata, condivide la tua Iniziativa e agisce immediatamente dopo il tuo turno. Segue i tuoi comandi verbali o effettua l'azione Schivata se non ne riceve. L'uso di uno slot superiore applica il livello di quel slot al blocco di statistiche.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "L'uso di uno slot superiore applica il livello di quel slot al blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-costrutto",
+    "name": "Convoca Costrutto",
+    "name_it": "Convoca costrutto",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "una cassaforte del valore di almeno 400 mr",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami lo spirito di un Costrutto che si manifesta in uno spazio non occupato entro gittata, usando il blocco di statistiche Spirito Costrutto. Scegli un materiale (Argilla, Metallo o Pietra) che ne determina l'aspetto e certi dettagli del blocco di statistiche. La creatura è tua alleata, condivide la tua Iniziativa ma agisce dopo di te, e obbedisce ai comandi verbali. Senza comandi, effettua l'azione Schivata e si allontana dal pericolo. Scompare a 0 PF o quando l'incantesimo termina. L'uso di slot superiori applica il livello di quel slot al blocco di statistiche.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "L'uso di slot superiori applica il livello di quel slot al blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-elementale",
+    "name": "Convoca Elementale",
+    "name_it": "Convoca elementale",
+    "level": 4,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "incenso del valore di almeno 400 mr",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito elementale che si manifesta in uno spazio non occupato entro gittata. Scegli Aria, Terra, Fuoco o Acqua come elemento. La creatura assume la forma di un'entità bipede avvolta nell'elemento scelto. È tua alleata, condivide la tua Iniziativa e agisce immediatamente dopo il tuo turno. Obbedisce ai tuoi comandi verbali o effettua l'azione Schivata se non ne riceve. Scompare quando raggiunge 0 Punti Ferita o quando l'incantesimo termina.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "L'uso di uno slot superiore applica il livello di quel slot al blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-fatata",
+    "name": "Convoca Fatata",
+    "name_it": "Convoca fatata",
+    "level": 3,
+    "school": "conjuration",
+    "classes": [
+      "druid",
+      "ranger",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "una ciocca di capelli, un dente o un'unghia della fatata, avvolti in seta",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito fatato che si manifesta in uno spazio non occupato entro gittata usando il blocco di statistiche Spirito Fatato. Scegli un umore (Furioso, Allegro o Dispettoso) che ne determina l'aspetto e i dettagli del blocco di statistiche. Lo spirito è tuo alleato, condivide la tua Iniziativa e agisce immediatamente dopo il tuo turno. Segue i tuoi comandi verbali; altrimenti effettua l'azione Schivata e si allontana dal pericolo. Scompare a 0 PF o quando l'incantesimo termina. Con uno slot superiore, usa il livello di quel slot per il blocco di statistiche.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "Con uno slot superiore, usa il livello di quel slot per il blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-demonio",
+    "name": "Convoca Demonio",
+    "name_it": "Convoca demonio",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un viale di sangue del valore di almeno 600 mr",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito demoniaco che si manifesta in uno spazio non occupato entro gittata. Scegli Demone, Diavolo o Yugoloth per determinare l'aspetto della creatura. L'alleato evocato condivide la tua Iniziativa ma agisce immediatamente dopo il tuo turno, obbedendo ai comandi verbali. Senza ordini, effettua l'azione Schivata e si allontana dal pericolo. Scompare a 0 PF o al termine dell'incantesimo. L'uso di slot superiori aumenta la potenza della creatura.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "L'uso di slot superiori aumenta la potenza della creatura secondo il blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "convoca-non-morto",
+    "name": "Convoca Non Morto",
+    "name_it": "Convoca non morto",
+    "level": 3,
+    "school": "necromancy",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "27 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un osso e un po' di sporcizia da una tomba",
+    "duration": "concentrazione, fino a 1 ora",
+    "description": null,
+    "description_it": "Chiami uno spirito non morto che si manifesta in uno spazio non occupato entro gittata usando il blocco di statistiche Spirito Non Morto. Scegli la forma della creatura: Spettrale, Putrefatta o Scheletrica. La creatura è tua alleata, condivide la tua Iniziativa e agisce immediatamente dopo il tuo turno. Obbedisce ai tuoi comandi verbali senza richiedere un'azione da parte tua. Se non impartisci comandi, effettua l'azione Schivata e si muove per evitare il pericolo. Scompare a 0 PF o quando l'incantesimo termina. Con uno slot superiore, usa il livello di quel slot per il blocco di statistiche.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "Con uno slot superiore, usa il livello di quel slot per il blocco di statistiche.",
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "faretra-rapida",
+    "name": "Faretra Rapida",
+    "name_it": "Faretra rapida",
+    "level": 5,
+    "school": "transmutation",
+    "classes": [
+      "ranger"
+    ],
+    "action_type": "bonus action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "una faretra magica",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Quando lanci questo incantesimo e come Azione Bonus finché non termina, puoi effettuare due attacchi con un'arma che lancia frecce o dardi, come un arco lungo o una balestra leggera. L'incantesimo crea magicamente le munizioni necessarie per ciascun attacco. Ogni freccia o dardo creato infligge danni come un normale proiettile non magico del suo tipo e si disintegra immediatamente dopo aver colpito o mancato.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": true,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "statica-sinaptica",
+    "name": "Statica Sinaptica",
+    "name_it": "Statica sinaptica",
+    "level": 5,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "36 metri",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Provochi l'eruzione di energia psichica in un punto entro gittata. Ogni creatura in una Sfera di 6 metri di raggio centrata su quel punto effettua un tiro salvezza su Intelligenza, subendo 8d6 danni psichici in caso di fallimento o la metà in caso di successo. In caso di fallimento, un bersaglio ha anche pensieri offuscati per 1 minuto, sottraendo 1d6 a tutti i tiri per colpire, alle prove di caratteristica e ai tiri salvezza su Costituzione per mantenere la Concentrazione. Il bersaglio effettua un tiro salvezza su Intelligenza alla fine di ciascuno dei suoi turni, ponendo fine all'effetto in caso di successo.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Intelligenza",
+    "attack_roll": false,
+    "damage": "8d6 psichici",
+    "area_of_effect": "Sfera 6 m"
+  },
+  {
+    "slug": "calderone-ribollente-di-tasha",
+    "name": "Calderone Ribollente di Tasha",
+    "name_it": "Calderone ribollente di Tasha",
+    "level": 6,
+    "school": "conjuration",
+    "classes": [
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "1,5 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un calderone con zampe artigliate del valore di almeno 300 mr",
+    "duration": "10 minuti",
+    "description": null,
+    "description_it": "Evochi un calderone con zampe artigliate riempito di liquido ribollente in uno spazio non occupato entro 1,5 metri da te. Il calderone non può essere spostato e scompare quando l'incantesimo termina. Il liquido duplica le proprietà di una pozione Comune o Non Comune a tua scelta. Come Azione Bonus, tu o un alleato potete prelevare una pozione dal calderone. Il calderone produce un numero di pozioni pari al tuo modificatore della caratteristica da incantatore (minimo 1). Quando l'ultima pozione viene prelevata, il calderone scompare e l'incantesimo termina. Le pozioni non consumate scompaiono se lanci nuovamente l'incantesimo.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "telepatia",
+    "name": "Telepatia",
+    "name_it": "Telepatia",
+    "level": 8,
+    "school": "divination",
+    "classes": [
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "Illimitata",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un anello d'argento gemellato",
+    "duration": "24 ore",
+    "description": null,
+    "description_it": null,
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": false,
+    "damage": null,
+    "area_of_effect": null
+  },
+  {
+    "slug": "sferza-di-spine",
+    "name": "Sferza di Spine",
+    "name_it": "Sferza di spine",
+    "level": 0,
+    "school": "transmutation",
+    "classes": [
+      "druid"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "9 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "lo stelo di una pianta con le spine",
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Crei una frusta simile a una vite coperta di spine che si scaglia verso una creatura entro gittata al tuo comando. Effettua un attacco con incantesimo in mischia contro il bersaglio. In caso di colpo, il bersaglio subisce 1d6 danni perforanti e, se è di Taglia Grande o inferiore, puoi trascinarlo fino a 3 metri verso di te.",
+    "cantrip_upgrade": "I danni aumentano di 1d6 quando l'incantatore raggiunge il 5° livello (2d6), l'11° livello (3d6) e il 17° livello (4d6).",
+    "higher_level_slot": null,
+    "saving_throw": null,
+    "attack_roll": true,
+    "damage": "1d6 perforanti",
+    "area_of_effect": null
+  },
+  {
+    "slug": "tuono",
+    "name": "Tuono",
+    "name_it": "Tuono",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "bard",
+      "druid",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "S"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Ogni creatura in un'Emanazione di 1,5 metri originata da te deve superare un tiro salvezza su Costituzione o subire 1d6 danni da tuono. Il suono del tuono è udibile fino a 30 metri di distanza.",
+    "cantrip_upgrade": "I danni aumentano di 1d6 quando l'incantatore raggiunge il 5° livello (2d6), l'11° livello (3d6) e il 17° livello (4d6).",
+    "higher_level_slot": null,
+    "saving_throw": "Costituzione",
+    "attack_roll": false,
+    "damage": "1d6 tuono",
+    "area_of_effect": "Emanazione 1,5 m"
+  },
+  {
+    "slug": "colpo-tonante",
+    "name": "Colpo Tonante",
+    "name_it": "Colpo tonante",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Il tuo colpo risuona di tuono udibile entro 90 metri. Il bersaglio subisce 2d6 danni da tuono extra. Se il bersaglio è una creatura, deve superare un tiro salvezza su Forza o essere spinto di 3 metri e acquisire la condizione Prono. I danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "saving_throw": "Forza",
+    "attack_roll": true,
+    "damage": "2d6 tuono",
+    "area_of_effect": null
+  },
+  {
+    "slug": "rintocco-della-morte",
+    "name": "Rintocco della Morte",
+    "name_it": "Rintocco della morte",
+    "level": 0,
+    "school": "necromancy",
+    "classes": [
+      "cleric",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "18 metri",
+    "components": [
+      "V",
+      "S"
+    ],
+    "material": null,
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Punti verso una creatura che riesci a vedere entro gittata, e il singolo rintocco di una lugubre campana è udibile entro 3 metri dal bersaglio. Il bersaglio deve superare un tiro salvezza su Saggezza o subire 1d8 danni necrotici. Se al bersaglio mancano dei Punti Ferita, subisce invece 1d12 danni necrotici.",
+    "cantrip_upgrade": "I danni aumentano di un dado quando l'incantatore raggiunge il 5° livello (2d8 o 2d12), l'11° livello (3d8 o 3d12) e il 17° livello (4d8 o 4d12).",
+    "higher_level_slot": null,
+    "saving_throw": "Saggezza",
+    "attack_roll": false,
+    "damage": "1d8 o 1d12 necrotici",
+    "area_of_effect": null
+  },
+  {
+    "slug": "fulmine-stregato",
+    "name": "Fulmine Stregato",
+    "name_it": "Fulmine stregato",
+    "level": 1,
+    "school": "evocation",
+    "classes": [
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "18 metri",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un ramoscello di un albero colpito dal fulmine",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Un raggio di energia crepitante si lancia verso una creatura entro gittata, formando un arco sostenuto di fulmine tra te e il bersaglio. Effettua un attacco con incantesimo a distanza. In caso di colpo, il bersaglio subisce 2d12 danni da fulmine. Nei tuoi turni successivi, puoi effettuare un'Azione Bonus per infliggere automaticamente 1d12 danni da fulmine al bersaglio, anche se il primo attacco aveva mancato. L'incantesimo termina se il bersaglio si trova oltre la gittata o ha Copertura Totale. I danni iniziali aumentano di 1d12 per ogni livello di slot superiore al 1°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni iniziali aumentano di 1d12 per ogni livello di slot superiore al 1°.",
+    "saving_throw": null,
+    "attack_roll": true,
+    "damage": "2d12 fulmine",
+    "area_of_effect": null
+  },
+  {
+    "slug": "parola-di-radiosita",
+    "name": "Parola di Radiosità",
+    "name_it": "Parola di radiosità",
+    "level": 0,
+    "school": "evocation",
+    "classes": [
+      "cleric"
+    ],
+    "action_type": "action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "M"
+    ],
+    "material": "un simbolo sacro",
+    "duration": "istantanea",
+    "description": null,
+    "description_it": "Radiosità ardente erutta da te in un'Emanazione di 1,5 metri. Ogni creatura a tua scelta che riesci a vedere al suo interno deve superare un tiro salvezza su Costituzione o subire 1d6 danni radiosi.",
+    "cantrip_upgrade": "I danni aumentano di 1d6 quando l'incantatore raggiunge il 5° livello (2d6), l'11° livello (3d6) e il 17° livello (4d6).",
+    "higher_level_slot": null,
+    "saving_throw": "Costituzione",
+    "attack_roll": false,
+    "damage": "1d6 radiosi",
+    "area_of_effect": "Emanazione 1,5 m"
+  },
+  {
+    "slug": "colpo-d-ira",
+    "name": "Colpo d'Ira",
+    "name_it": "Colpo d'ira",
+    "level": 1,
+    "school": "necromancy",
+    "classes": [
+      "paladin"
+    ],
+    "action_type": "bonus action",
+    "concentration": false,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V"
+    ],
+    "material": null,
+    "duration": "1 minuto",
+    "description": null,
+    "description_it": "Lanciato come Azione Bonus dopo aver colpito con un'arma da mischia o un Attacco Senz'armi. Il bersaglio subisce 1d6 danni necrotici e deve superare un tiro salvezza su Saggezza o diventare Impaurito fino al termine dell'incantesimo. Le creature Impaurite ripetono il tiro salvezza alla fine di ciascun turno, ponendo fine all'incantesimo in caso di successo. I danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": "I danni aumentano di 1d6 per ogni livello di slot superiore al 1°.",
+    "saving_throw": "Saggezza",
+    "attack_roll": true,
+    "damage": "1d6 necrotici",
+    "area_of_effect": null
+  },
+  {
+    "slug": "presenza-regale-di-yolande",
+    "name": "Presenza Regale di Yolande",
+    "name_it": "Presenza regale di Yolande",
+    "level": 5,
+    "school": "enchantment",
+    "classes": [
+      "bard",
+      "wizard"
+    ],
+    "action_type": "action",
+    "concentration": true,
+    "ritual": false,
+    "range": "incantatore",
+    "components": [
+      "V",
+      "S",
+      "M"
+    ],
+    "material": "un pezzo di abbigliamento regale",
+    "duration": "concentrazione, fino a 1 minuto",
+    "description": null,
+    "description_it": "Ti circondi di una maestà ultraterrena in un'Emanazione di 3 metri. Ogni volta che l'Emanazione entra nello spazio di una creatura che riesci a vedere e ogni volta che una creatura che riesci a vedere entra nell'Emanazione o vi termina il turno, puoi costringerla a effettuare un tiro salvezza su Saggezza. In caso di fallimento, il bersaglio subisce 4d6 danni psichici e acquisisce la condizione Prono, e puoi spingerlo fino a 3 metri. In caso di successo, subisce solo la metà dei danni. Una creatura effettua questo tiro salvezza solo una volta per turno.",
+    "cantrip_upgrade": null,
+    "higher_level_slot": null,
+    "saving_throw": "Saggezza",
+    "attack_roll": false,
+    "damage": "4d6 psichici",
+    "area_of_effect": "Emanazione 3 m"
   }
 ]
